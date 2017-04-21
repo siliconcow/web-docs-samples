@@ -18,13 +18,28 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script type="text/javascript" src="key.js"></script>
   <script type="text/javascript" src="main.js"></script>
+  <link rel="stylesheet"  href="chartist-js/dist/chartist.min.css">
+  <link rel="stylesheet"  href="demo.css">
 </head>
-<body>
-  <form id="fileform" action="">
+<body >
+  <video id="video" width="640" height="480" autoplay></video>
+  <button id="snap">Snap Photo</button>
+  <button id="start">Start Realtime</button>
+  <button id="stop">Stop Realtime</button>
+  <div style="width: 100%; overflow: hidden;">
+    <div style="width: 600px; float: left;">
+     <canvas id="canvas" width="640" height="480"></canvas>
+    </div>
+    <div style="margin-left: 620px;">
+     <div class="ct-chart ct-perfect-fourth"></div>
+  </div>
+</div>
+
+  <!-- <form id="fileform" action="">
     <select name="type">
+      <option value="FACE_DETECTION">FACE_DETECTION</option>
       <option value="LANDMARK_DETECTION">LANDMARK_DETECTION</option>
       <option value="TYPE_UNSPECIFIED">TYPE_UNSPECIFIED</option>
-      <option value="FACE_DETECTION">FACE_DETECTION</option>
       <option value="LOGO_DETECTION">LOGO_DETECTION</option>
       <option value="LABEL_DETECTION">LABEL_DETECTION</option>
       <option value="TEXT_DETECTION">TEXT_DETECTION</option>
@@ -33,8 +48,9 @@
     </select><br />
     <input type="file" name="fileField"><br /><br />
     <input type="submit" name="submit" value="Submit">
-  </form>
+  </form> -->
 
   <code style="white-space:pre" id="results"></code>
+  <script src="chartist-js/dist/chartist.min.js"></script>
 </body>
 </html>
